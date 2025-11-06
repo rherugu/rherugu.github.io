@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Raghav Herugu — Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Resume of Raghav Herugu — AI developer, finance & trading." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Raghav Herugu — Resume" />
+  <meta property="og:description" content="AI developer • Quant • Front-end engineer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="resume-preview.png" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg: #0b1020;
+      --bg2: #101935;
+      --card: rgba(255,255,255,0.06);
+      --text: #e9eefc;
+      --muted: #b7c0dc;
+      --accent: #7aa2ff;
+      --accent-2: #9b8cff;
+      --ring: rgba(122,162,255,0.6);
+      --shadow: 0 10px 35px rgba(0,0,0,0.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --bg2: #eef1f9;
+        --card: rgba(255,255,255,0.8);
+        --text: #0c1230;
+        --muted: #4e5b85;
+        --accent: #3256ff;
+        --accent-2: #6a34ff;
+        --ring: rgba(50,86,255,0.25);
+        --shadow: 0 10px 30px rgba(5,12,50,0.15);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, Noto, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(122,162,255,0.18), transparent 60%),
+        radial-gradient(1000px 600px at 90% 110%, rgba(155,140,255,0.18), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      min-height:100%;
+    }
+    .wrap{
+      max-width:1100px;
+      margin: clamp(16px, 3vh, 40px) auto;
+      padding: 14px;
+    }
+    .header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      margin-bottom:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+      padding:12px 16px;
+      background:var(--card);
+      backdrop-filter: saturate(1.2) blur(6px);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:16px;
+      box-shadow: var(--shadow);
+    }
+    .logo{
+      width:40px; height:40px; display:grid; place-items:center;
+      border-radius:12px; background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:white; font-weight:800; letter-spacing:0.5px;
+    }
+    .brand h1{
+      font-size:18px; margin:0; letter-spacing:0.2px;
+    }
+    .brand p{
+      margin:0; color:var(--muted); font-size:13px;
+    }
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .btn{
+      appearance:none; border:1px solid transparent;
+      padding:10px 14px; border-radius:12px; font-weight:600;
+      background:var(--card);
+      color:var(--text);
+      cursor:pointer; transition:.2s transform, .2s box-shadow, .2s border-color, .2s background;
+      box-shadow: var(--shadow);
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: var(--ring); }
+    .btn.primary{
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:white; border:0;
+    }
+    .viewer{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.14);
+      background:var(--card);
+      backdrop-filter: saturate(1.2) blur(6px);
+      box-shadow: var(--shadow);
+    }
+    .viewer iframe, .viewer object, .viewer embed{
+      width:100%; height:calc(100vh - 210px); border:0; display:block;
+    }
+    .viewer .fallback{
+      padding:28px; text-align:center; color:var(--muted);
+    }
+    .meta{
+      margin-top:10px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+      color:var(--muted); font-size:13px;
+    }
+    .toggle{
+      display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--muted);
+      padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12);
+      background:var(--card); cursor:pointer;
+    }
+    .small{
+      font-size:12px; opacity:.85;
+    }
+    @media (max-width: 780px){
+      .brand{flex:1}
+      .brand h1{font-size:16px}
+      .viewer iframe, .viewer object, .viewer embed{ height:calc(100vh - 240px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="brand">
+        <div class="logo">RH</div>
+        <div>
+          <h1>Raghav Herugu — Resume</h1>
+          <p>AI developer • Quant • Front-end • React + TypeScript</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="resume.pdf" download>
+          <!-- download icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3v10m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download
+        </a>
+        <button class="btn" id="printBtn">
+          <!-- printer icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9V4h12v5M6 19h12v-5H6v5Zm0 0H4v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6h-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Print
+        </button>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">
+          <!-- external link -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="m14 4 6 0 0 6M20 4l-9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M20 14v3a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Open PDF
+        </a>
+        <button class="toggle" id="themeToggle" title="Toggle theme">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m14.95 6.95-1.41-1.41M7.46 7.46 6.05 6.05m11.31 0-1.41 1.41M7.46 16.54 6.05 17.95" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Theme
+        </button>
+      </div>
+    </div>
+
+    <div class="viewer" id="viewer">
+      <!-- Native PDF render (fast + simple). GitHub Pages serves PDFs fine. -->
+      <object data="resume.pdf#view=FitH" type="application/pdf">
+        <div class="fallback">
+          <p>PDF viewer not supported on this device.</p>
+          <p><a class="btn" href="resume.pdf">Open the resume</a></p>
+        </div>
+      </object>
+    </div>
+
+    <div class="meta">
+      <div>Tip: use the buttons above to download or print.</div>
+      <div class="small">© <span id="year"></span> Raghav Herugu</div>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Print
+    document.getElementById('printBtn').addEventListener('click', () => {
+      const win = window.open('resume.pdf', '_blank', 'noopener');
+      if (win) win.onload = () => win.print();
+    });
+
+    // Theme toggle (light/dark)
+    const KEY = 'resume-theme';
+    const toggleBtn = document.getElementById('themeToggle');
+    function setTheme(t){
+      if(t==='light'){ document.documentElement.style.colorScheme = 'light'; document.documentElement.dataset.theme='light'; }
+      else if(t==='dark'){ document.documentElement.style.colorScheme = 'dark'; document.documentElement.dataset.theme='dark'; }
+      else { document.documentElement.style.colorScheme = ''; document.documentElement.dataset.theme=''; }
+      localStorage.setItem(KEY,t);
+    }
+    function currentPref(){
+      const saved = localStorage.getItem(KEY);
+      if(saved) return saved;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    setTheme(currentPref());
+    toggleBtn.addEventListener('click', () => {
+      const next = (currentPref() === 'dark') ? 'light' : 'dark';
+      setTheme(next);
+    });
+
+    // Adjust height on mobile address bar changes
+    const viewer = document.getElementById('viewer');
+    function setHeight(){
+      const h = Math.max(window.innerHeight, document.documentElement.clientHeight);
+      const headerH = document.querySelector('.header').offsetHeight;
+      const metaH = document.querySelector('.meta').offsetHeight;
+      viewer.style.setProperty('--vh', h + 'px');
+    }
+    window.addEventListener('resize', setHeight, { passive: true });
+    window.addEventListener('orientationchange', setHeight, { passive: true });
+    setHeight();
+  </script>
+</body>
+</html>
